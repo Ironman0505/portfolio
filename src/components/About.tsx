@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { Shield, Lock, Activity } from 'lucide-react';
+import { Shield, Lock, Activity, KeyIcon, CpuIcon, DatabaseIcon } from 'lucide-react';
 
 export default function About() {
   return (
@@ -26,22 +26,22 @@ export default function About() {
 
         <div className="grid md:grid-cols-3 gap-8">
           {[
-            {
-              icon: <Shield className="w-8 h-8 text-emerald-400" />,
-              title: 'Defense in Depth',
-              description: 'Implementing multi-layered security controls to protect critical assets and mitigate risks at every level of the infrastructure.'
-            },
-            {
-              icon: <Lock className="w-8 h-8 text-emerald-400" />,
-              title: 'Zero Trust Architecture',
-              description: 'Designing systems based on the principle of "never trust, always verify" to prevent lateral movement and unauthorized access.'
-            },
-            {
-              icon: <Activity className="w-8 h-8 text-emerald-400" />,
-              title: 'Continuous Monitoring',
-              description: 'Deploying advanced SIEM solutions and automated threat hunting tools to detect and respond to incidents in real-time.'
-            }
-          ].map((item, index) => (
+  {
+    icon: <DatabaseIcon className="w-8 h-8 text-emerald-400" />,
+    title: 'Data Security Engineering',
+    description: 'Designing and optimizing enterprise Data Loss Prevention (DLP) controls to protect sensitive data across communication channels, endpoints, and cloud services while reducing false positives and improving detection accuracy.'
+  },
+  {
+    icon: <KeyIcon className="w-8 h-8 text-emerald-400" />,
+    title: 'Identity & Access Governance',
+    description: 'Building governance systems that enforce accountable ownership, lifecycle management, and secure access control for privileged identities such as service accounts and enterprise applications.'
+  },
+  {
+    icon: <CpuIcon className="w-8 h-8 text-emerald-400" />,
+    title: 'Security Automation & Detection',
+    description: 'Developing automation pipelines and SOAR workflows that correlate security telemetry, enrich alerts with contextual intelligence, and enable faster investigation and response across security operations.'
+  }
+].map((item, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}

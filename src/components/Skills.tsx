@@ -1,26 +1,54 @@
 import { motion } from 'motion/react';
-import { Network, Cloud, Code, Wrench } from 'lucide-react';
+import { Network, Cloud,KeyIcon, CpuIcon as Cpu, Wrench } from 'lucide-react';
 
 const skillCategories = [
   {
-    title: 'Network Security',
+    title: 'Data Security & Information Protection',
     icon: <Network className="w-6 h-6 text-emerald-400" />,
-    skills: ['Firewalls (Palo Alto, Cisco)', 'IDS/IPS', 'VPNs', 'Packet Analysis (Wireshark)', 'Zero Trust'],
+    skills: [
+      'Microsoft Purview DLP',
+      'Data Classification & Sensitivity Labels',
+      'Sensitive Information Types (SIT)',
+      'Endpoint DLP',
+      'Data Loss Prevention Policy Engineering',
+      'Risk-based Detection (Toxic Combinations)'
+    ],
   },
   {
-    title: 'Cloud Security',
+    title: 'Identity & Access Security',
+    icon: <KeyIcon className="w-6 h-6 text-emerald-400" />,
+    skills: [
+      'Azure AD / Entra ID',
+      'Service Account Governance',
+      'Identity Lifecycle Management',
+      'RBAC & Access Control Models',
+      'Privileged Access Management Concepts',
+      'IAM Integrations (SailPoint, CyberArk EPV)'
+    ],
+  },
+  {
+    title: 'Security Engineering & Automation',
+    icon: <Cpu className="w-6 h-6 text-emerald-400" />,
+    skills: [
+      'Security Automation Workflows',
+      'SOAR Playbook Development (Cortex XSOAR)',
+      'Alert Enrichment Pipelines',
+      'Log Correlation & Detection Engineering',
+      'REST API Integrations',
+      'Node.js Security Tooling'
+    ],
+  },
+  {
+    title: 'Cloud & Security Platforms',
     icon: <Cloud className="w-6 h-6 text-emerald-400" />,
-    skills: ['AWS Security', 'Azure Security Center', 'IAM', 'Container Security (Docker, K8s)', 'CSPM'],
-  },
-  {
-    title: 'Application Security',
-    icon: <Code className="w-6 h-6 text-emerald-400" />,
-    skills: ['OWASP Top 10', 'SAST/DAST', 'Secure Code Review', 'Penetration Testing', 'DevSecOps'],
-  },
-  {
-    title: 'Tools & Technologies',
-    icon: <Wrench className="w-6 h-6 text-emerald-400" />,
-    skills: ['Splunk', 'CrowdStrike', 'Burp Suite', 'Metasploit', 'Python/Bash Scripting'],
+    skills: [
+      'Microsoft Defender for Cloud Apps (CASB)',
+      'CrowdStrike Falcon (Endpoint DLP & SIEM)',
+      'Cloud Security Fundamentals',
+      'Security Monitoring & Telemetry',
+      'Firewall Policy Integration',
+      'Security Governance & Policy Controls'
+    ],
   },
 ];
 
